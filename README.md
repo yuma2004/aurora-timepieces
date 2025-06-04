@@ -78,7 +78,7 @@ aurora-timepieces/
 
 1. **リポジトリのクローン**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yuma2004/aurora-timepieces.git
    cd aurora-timepieces
    ```
 
@@ -234,4 +234,4 @@ style(layout): 🎨 Refine section spacing harmony
 
 ---
 
-*"静寂の中に息づく、時を超えた優雅さ"* 🕰️✨ 
+*"静寂の中に息づく、時を超えた優雅さ"* 🕰️✨
