@@ -1,0 +1,921 @@
+/* =====================================
+   AURORA TIMEPIECES - Main Stylesheet
+   静寂の中の時を超えた優雅さ
+   ===================================== */
+
+/* CSS Custom Properties - Human-Curated Palette */
+:root {
+    /* Moonlit Nordic Landscape & Heirloom Library Palette */
+    --deep-charcoal: #2a2b2a;
+    --warm-slate-grey: #565856;
+    --aged-parchment: #f7f5f0;
+    --antique-bronze: #8b7355;
+    --aurora-teal: #4a6b6b;
+    --midnight-blue: #2c3b52;
+    --whisper-white: #fdfdfc;
+    --shadow-veil: rgba(42, 43, 42, 0.08);
+    --light-caress: rgba(247, 245, 240, 0.95);
+    
+    /* Typography - Expert Optical Kerning */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Cormorant Garamond', serif;
+    
+    /* Breathing Line-Heights */
+    --line-height-contemplative: 1.75;
+    --line-height-meditative: 1.65;
+    --line-height-whisper: 1.45;
+    
+    /* Hand-Touched Margins (Subtle Organic Asymmetry) */
+    --margin-micro: 0.75rem;
+    --margin-gentle: 1.25rem;
+    --margin-breath: 2.1rem;
+    --margin-silence: 3.7rem;
+    --margin-sanctuary: 5.2rem;
+    --margin-cathedral: 8.3rem;
+    
+    /* Gasp Principle - Architectural White Space */
+    --space-whisper: 1.2rem;
+    --space-breath: 2.4rem;
+    --space-contemplation: 4.1rem;
+    --space-serenity: 6.8rem;
+    --space-cathedral: 12rem;
+    
+    /* Transitions - Wistful Lull Fade */
+    --transition-whisper: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-meditation: all 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-symphony: all 1200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Base Reset with Human Touch */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+/* Analogue Grain Overlay - Applied to body only */
+body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: var(--line-height-meditative);
+    color: var(--deep-charcoal);
+    background-color: var(--aged-parchment);
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(139, 115, 85, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(74, 107, 107, 0.015) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(44, 59, 82, 0.018) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Typography Hierarchy - Contemplative Elegance */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: var(--line-height-whisper);
+    letter-spacing: -0.02em;
+    color: var(--deep-charcoal);
+}
+
+h1 { font-size: 2.8rem; margin-bottom: var(--margin-breath); }
+h2 { font-size: 2.4rem; margin-bottom: var(--margin-gentle); }
+h3 { font-size: 2rem; margin-bottom: var(--margin-gentle); }
+h4 { font-size: 1.6rem; margin-bottom: var(--margin-micro); }
+h5 { font-size: 1.4rem; margin-bottom: var(--margin-micro); }
+h6 { font-size: 1.2rem; margin-bottom: var(--margin-micro); }
+
+p {
+    margin-bottom: var(--margin-gentle);
+    max-width: 65ch;
+}
+
+/* Enhanced Loading State */
+.aurora-loading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.aurora-loaded .aurora-loading {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navigation - Sanctuary of Subtle Presence */
+.nav-sanctuary {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(247, 245, 240, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(42, 43, 42, 0.08);
+    z-index: 1000;
+    transition: var(--transition-whisper);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-whisper) var(--space-breath);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-essence {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brand-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--deep-charcoal);
+    margin-bottom: 0;
+}
+
+.brand-philosophy {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--warm-slate-grey);
+    letter-spacing: 0.08em;
+    margin-bottom: 0;
+    margin-left: 2px; /* Hand-touched asymmetry */
+}
+
+.nav-constellation {
+    display: flex;
+    list-style: none;
+    gap: var(--space-breath);
+}
+
+.nav-whisper {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--deep-charcoal);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: var(--transition-whisper);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-whisper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--antique-bronze);
+    transition: var(--transition-meditation);
+}
+
+.nav-whisper:hover {
+    color: var(--antique-bronze);
+}
+
+.nav-whisper:hover::after {
+    width: 100%;
+}
+
+/* Hero Section - Timeless Contemplation */
+.hero-sanctuary {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: var(--space-cathedral) var(--space-breath) var(--space-serenity);
+    background: linear-gradient(135deg, 
+        var(--aged-parchment) 0%, 
+        rgba(247, 245, 240, 0.8) 100%);
+    overflow: hidden;
+}
+
+.hero-canvas {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content-constellation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-serenity);
+    align-items: center;
+}
+
+.hero-text-sanctuary {
+    padding-right: var(--space-contemplation);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--deep-charcoal);
+    margin-bottom: var(--space-breath);
+    opacity: 0;
+    animation: wistfulFadeIn 2s ease-out 0.5s forwards;
+}
+
+.title-line {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.hero-meditation {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: var(--line-height-contemplative);
+    color: var(--warm-slate-grey);
+    margin-bottom: var(--space-contemplation);
+    opacity: 0;
+    animation: wistfulFadeIn 2s ease-out 1s forwards;
+}
+
+.hero-invitation {
+    margin-top: var(--space-breath);
+    opacity: 0;
+    animation: wistfulFadeIn 2s ease-out 1.5s forwards;
+}
+
+/* Timepiece Shrine - Visual Poetry */
+.hero-timepiece-shrine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.timepiece-aura {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center,
+        rgba(139, 115, 85, 0.05) 0%,
+        rgba(74, 107, 107, 0.03) 40%,
+        transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watch-silhouette {
+    width: 240px;
+    height: 240px;
+    background: linear-gradient(145deg, 
+        var(--warm-slate-grey) 0%,
+        var(--deep-charcoal) 50%,
+        var(--warm-slate-grey) 100%);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 
+        0 20px 60px rgba(42, 43, 42, 0.3),
+        inset 0 1px 3px rgba(247, 245, 240, 0.3),
+        inset 0 -1px 3px rgba(42, 43, 42, 0.3);
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.watch-silhouette::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    background: var(--midnight-blue);
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced Watch Face Details */
+.watch-silhouette::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background: var(--aged-parchment);
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center bottom;
+    animation: clockHandTick 60s linear infinite;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* CTA Buttons - Whispered Invitations */
+.cta-whisper {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--deep-charcoal);
+    text-decoration: none;
+    border: 1.5px solid var(--antique-bronze);
+    background: transparent;
+    transition: var(--transition-meditation);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.cta-whisper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--antique-bronze);
+    transition: var(--transition-meditation);
+    z-index: -1;
+}
+
+.cta-whisper:hover {
+    color: var(--aged-parchment);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.25);
+}
+
+.cta-whisper:hover::before {
+    left: 0;
+}
+
+/* Section Containers - Cathedral Spacing */
+.content-canvas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-breath);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--deep-charcoal);
+    margin-bottom: var(--space-serenity);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--antique-bronze);
+}
+
+/* Philosophy Section - Contemplative Depth */
+.philosophy-sanctuary {
+    padding: var(--space-cathedral) 0;
+    background: var(--aged-parchment);
+}
+
+.philosophy-meditation {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.philosophy-essence {
+    margin-top: var(--space-contemplation);
+}
+
+.philosophy-verse {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: var(--line-height-contemplative);
+    color: var(--warm-slate-grey);
+    margin-bottom: var(--space-breath);
+    font-style: italic;
+    max-width: none;
+    position: relative;
+}
+
+/* Collection Section - Gallery of Time */
+.collection-sanctuary {
+    padding: var(--space-cathedral) 0;
+    background: linear-gradient(180deg, 
+        var(--aged-parchment) 0%, 
+        rgba(247, 245, 240, 0.5) 100%);
+}
+
+.collection-constellation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-serenity);
+    margin-top: var(--space-contemplation);
+}
+
+.timepiece-shrine {
+    background: var(--whisper-white);
+    padding: var(--space-contemplation);
+    box-shadow: 0 10px 40px rgba(42, 43, 42, 0.08);
+    transition: var(--transition-meditation);
+    border: 1px solid rgba(139, 115, 85, 0.1);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timepiece-shrine:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(42, 43, 42, 0.15);
+}
+
+.timepiece-vessel {
+    position: relative;
+    height: 250px;
+    margin-bottom: var(--space-breath);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.watch-essence {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: var(--transition-symphony);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Enhanced Watch Designs */
+.aurora-classic {
+    background: linear-gradient(145deg, 
+        var(--warm-slate-grey) 0%,
+        var(--deep-charcoal) 100%);
+}
+
+.aurora-classic::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--aged-parchment);
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--midnight-blue) 0%, var(--deep-charcoal) 100%);
+}
+
+.aurora-heritage {
+    background: linear-gradient(145deg, 
+        var(--antique-bronze) 0%,
+        var(--deep-charcoal) 100%);
+}
+
+.aurora-heritage::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--aged-parchment);
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--antique-bronze) 0%, var(--deep-charcoal) 100%);
+}
+
+.aurora-celestial {
+    background: linear-gradient(145deg, 
+        var(--midnight-blue) 0%,
+        var(--aurora-teal) 100%);
+}
+
+.aurora-celestial::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--aged-parchment);
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--aurora-teal) 0%, var(--midnight-blue) 100%);
+}
+
+.chiaroscuro-veil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        transparent 0%, 
+        rgba(42, 43, 42, 0.1) 50%, 
+        transparent 100%);
+    opacity: 0;
+    transition: var(--transition-meditation);
+}
+
+.timepiece-shrine:hover .chiaroscuro-veil {
+    opacity: 1;
+}
+
+.timepiece-soul {
+    text-align: center;
+}
+
+.timepiece-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--deep-charcoal);
+    margin-bottom: var(--margin-gentle);
+}
+
+.timepiece-poetry {
+    font-size: 1rem;
+    line-height: var(--line-height-contemplative);
+    color: var(--warm-slate-grey);
+    margin-bottom: var(--space-breath);
+    max-width: none;
+}
+
+.discover-whisper {
+    font-size: 0.9rem;
+    color: var(--antique-bronze);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition-whisper);
+}
+
+.discover-whisper:hover {
+    border-bottom-color: var(--antique-bronze);
+}
+
+/* Craftsmanship Section - Artisan's Soul */
+.craftsmanship-sanctuary {
+    padding: var(--space-cathedral) 0;
+    background: var(--whisper-white);
+}
+
+.craftsmanship-meditation {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.craftsmanship-narrative {
+    margin-top: var(--space-serenity);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-contemplation);
+}
+
+.narrative-verse {
+    padding: var(--space-breath);
+    text-align: left;
+    background: var(--aged-parchment);
+    border-radius: 8px;
+    border-left: 3px solid var(--antique-bronze);
+    margin-left: 3px; /* Hand-touched asymmetry */
+}
+
+.verse-title {
+    font-size: 1.5rem;
+    color: var(--deep-charcoal);
+    margin-bottom: var(--margin-gentle);
+}
+
+.verse-meditation {
+    font-size: 1.1rem;
+    line-height: var(--line-height-contemplative);
+    color: var(--warm-slate-grey);
+    max-width: none;
+}
+
+/* Experience Section - Gateway to Elegance */
+.experience-sanctuary {
+    padding: var(--space-cathedral) 0;
+    background: var(--aged-parchment);
+    text-align: center;
+}
+
+.experience-meditation {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-invitation {
+    font-size: 1.3rem;
+    line-height: var(--line-height-contemplative);
+    color: var(--warm-slate-grey);
+    margin-bottom: var(--space-contemplation);
+    max-width: none;
+}
+
+.experience-gateway {
+    display: flex;
+    gap: var(--space-breath);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-primary {
+    background: var(--antique-bronze);
+    color: var(--aged-parchment);
+    border-color: var(--antique-bronze);
+}
+
+.cta-primary:hover {
+    background: var(--deep-charcoal);
+    border-color: var(--deep-charcoal);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--deep-charcoal);
+    border-color: var(--deep-charcoal);
+}
+
+/* Contact Section - Dialogue Sanctuary */
+.contact-sanctuary {
+    padding: var(--space-cathedral) 0;
+    background: var(--whisper-white);
+}
+
+.contact-meditation {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-invitation {
+    font-size: 1.2rem;
+    line-height: var(--line-height-contemplative);
+    color: var(--warm-slate-grey);
+    margin-bottom: var(--space-serenity);
+    max-width: none;
+}
+
+.contact-constellation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-contemplation);
+    margin-top: var(--space-serenity);
+}
+
+.contact-vessel {
+    padding: var(--space-breath);
+    background: var(--aged-parchment);
+    border: 1px solid rgba(139, 115, 85, 0.1);
+    transition: var(--transition-whisper);
+    border-radius: 8px;
+    position: relative;
+}
+
+.contact-vessel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(42, 43, 42, 0.1);
+}
+
+.contact-method {
+    font-size: 1.3rem;
+    color: var(--deep-charcoal);
+    margin-bottom: var(--margin-gentle);
+}
+
+.contact-poetry {
+    font-size: 1rem;
+    line-height: var(--line-height-meditative);
+    color: var(--warm-slate-grey);
+    margin-bottom: var(--space-breath);
+    max-width: none;
+}
+
+.contact-whisper {
+    font-size: 0.95rem;
+    color: var(--antique-bronze);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition-whisper);
+}
+
+.contact-whisper:hover {
+    border-bottom-color: var(--antique-bronze);
+}
+
+/* Footer - Final Contemplation */
+.footer-sanctuary {
+    background: var(--deep-charcoal);
+    color: var(--aged-parchment);
+    padding: var(--space-serenity) 0 var(--space-breath);
+}
+
+.footer-canvas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-breath);
+}
+
+.footer-essence {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-serenity);
+    margin-bottom: var(--space-contemplation);
+}
+
+.brand-meditation {
+    padding-right: var(--space-breath);
+}
+
+.footer-brand {
+    font-size: 1.5rem;
+    color: var(--aged-parchment);
+    margin-bottom: var(--margin-gentle);
+}
+
+.footer-philosophy {
+    font-size: 1rem;
+    line-height: var(--line-height-meditative);
+    color: var(--warm-slate-grey);
+    max-width: none;
+}
+
+.footer-constellation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-breath);
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    color: var(--aged-parchment);
+    margin-bottom: var(--margin-gentle);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-whisper {
+    color: var(--warm-slate-grey);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition-whisper);
+}
+
+.footer-whisper:hover {
+    color: var(--aged-parchment);
+}
+
+.footer-closure {
+    border-top: 1px solid rgba(86, 88, 86, 0.3);
+    padding-top: var(--space-breath);
+    text-align: center;
+}
+
+.copyright-whisper {
+    font-size: 0.85rem;
+    color: var(--warm-slate-grey);
+    max-width: none;
+    margin-bottom: 0;
+}
+
+/* Scroll Invitation - Gentle Guidance */
+.scroll-invitation {
+    position: absolute;
+    bottom: var(--space-breath);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    animation: wistfulFadeIn 2s ease-out 2s forwards;
+}
+
+.scroll-whisper {
+    font-size: 0.8rem;
+    color: var(--warm-slate-grey);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.scroll-indicator {
+    width: 1px;
+    height: 30px;
+    background: var(--antique-bronze);
+    margin: 0 auto;
+    animation: gentlePulse 2s ease-in-out infinite;
+}
+
+/* Enhanced Visual Effects */
+.timepiece-aura::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(ellipse at center,
+        rgba(139, 115, 85, 0.03),
+        transparent 60%);
+    border-radius: 50%;
+    animation: breathingAura 8s ease-in-out infinite;
+}
+
+@keyframes breathingAura {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.05); opacity: 0.5; }
+}
+
+/* Responsive Design - Harmonious Adaptation */
+@media (max-width: 768px) {
+    :root {
+        --space-cathedral: 4rem;
+        --space-serenity: 3rem;
+        --space-contemplation: 2rem;
+    }
+    
+    .hero-content-constellation {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-text-sanctuary {
+        padding-right: 0;
+        order: 2;
+    }
+    
+    .hero-timepiece-shrine {
+        order: 1;
+        margin-bottom: var(--space-breath);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .nav-constellation {
+        display: none;
+    }
+    
+    .footer-essence {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-constellation {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .experience-gateway {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .collection-constellation {
+        grid-template-columns: 1fr;
+    }
+    
+    .craftsmanship-narrative {
+        grid-template-columns: 1fr;
+    }
+    
+    .timepiece-aura {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .watch-silhouette {
+        width: 180px;
+        height: 180px;
+    }
+} 

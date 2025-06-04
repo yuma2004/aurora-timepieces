@@ -1,0 +1,592 @@
+/* =====================================
+   AURORA TIMEPIECES - Animation Stylesheet
+   静寂の中に響く優雅な動き
+   ===================================== */
+
+/* Keyframe Animations - Wistful & Meditative */
+
+/* Wistful Fade In - Like Morning Mist Revealing the Mountains */
+@keyframes wistfulFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Gentle Float - Like a Timepiece Suspended in Contemplation */
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-5px) rotate(0.5deg);
+    }
+    66% {
+        transform: translateY(-3px) rotate(-0.3deg);
+    }
+}
+
+/* Gentle Pulse - Like a Whispered Heartbeat */
+@keyframes gentlePulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scaleY(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1.2);
+    }
+}
+
+/* Aurora Glow - Subtle Northern Light Effect */
+@keyframes auroraGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(139, 115, 85, 0.1),
+            0 0 40px rgba(74, 107, 107, 0.05),
+            0 0 60px rgba(44, 59, 82, 0.03);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(139, 115, 85, 0.15),
+            0 0 50px rgba(74, 107, 107, 0.08),
+            0 0 70px rgba(44, 59, 82, 0.05);
+    }
+}
+
+/* Contemplative Reveal - Text Appearing Like Thoughts */
+@keyframes contemplativeReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        letter-spacing: 0.3em;
+    }
+    70% {
+        letter-spacing: 0.05em;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0.03em;
+    }
+}
+
+/* Silken Shimmer - Like Light on Brushed Metal */
+@keyframes silkenShimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+/* Breathing Light - Gentle Pulsing Aura */
+@keyframes breathingLight {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Clock Hand Tick - Realistic Timepiece Movement */
+@keyframes clockHandTick {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    100% { 
+        transform: translate(-50%, -50%) rotate(360deg); 
+    }
+}
+
+/* Gentle Expand - Brand Underline Animation */
+@keyframes gentleExpand {
+    0%, 90%, 100% {
+        transform: scaleX(0);
+    }
+    45% {
+        transform: scaleX(0.6);
+    }
+}
+
+/* Meditation Flow - Wave Movement */
+@keyframes meditationFlow {
+    0% { 
+        transform: translateX(-50%) rotate(0deg); 
+    }
+    100% { 
+        transform: translateX(50%) rotate(360deg); 
+    }
+}
+
+/* Word Reveal - Text Animation */
+@keyframes wordReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aurora Flow - Glow Layer Movement */
+@keyframes auroraFlow {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+    33% {
+        transform: scale(1.1) rotate(120deg);
+        opacity: 0.5;
+    }
+    66% {
+        transform: scale(0.9) rotate(240deg);
+        opacity: 0.4;
+    }
+}
+
+/* Clock Tick - Second Hand Movement */
+@keyframes clockTick {
+    from { 
+        transform: translate(-50%, 0) rotate(0deg); 
+    }
+    to { 
+        transform: translate(-50%, 0) rotate(360deg); 
+    }
+}
+
+/* Lighting Shift - Chiaroscuro Effect */
+@keyframes lightingShift {
+    0%, 100% {
+        background: linear-gradient(135deg,
+            rgba(247, 245, 240, 0.1) 0%,
+            transparent 30%,
+            transparent 70%,
+            rgba(42, 43, 42, 0.1) 100%);
+    }
+    50% {
+        background: linear-gradient(225deg,
+            rgba(42, 43, 42, 0.1) 0%,
+            transparent 30%,
+            transparent 70%,
+            rgba(247, 245, 240, 0.1) 100%);
+    }
+}
+
+/* Gentle Glow - Focus Animation */
+@keyframes gentleGlow {
+    0%, 100% { 
+        opacity: 0; 
+        transform: scaleX(0); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scaleX(1); 
+    }
+}
+
+/* Refined Hover Effects - Human-Touched Interactions */
+
+/* Navigation Enhancement */
+.nav-whisper {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-whisper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(139, 115, 85, 0.05) 50%, 
+        transparent 100%);
+    transition: left 0.6s ease;
+}
+
+.nav-whisper:hover::before {
+    left: 100%;
+}
+
+/* Button Shimmer Effect */
+.cta-whisper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(247, 245, 240, 0.1) 50%, 
+        transparent 100%);
+    transition: left 0.8s ease;
+}
+
+.cta-whisper:hover::after {
+    left: 100%;
+}
+
+/* Timepiece Card Enchantment */
+.timepiece-shrine {
+    position: relative;
+    overflow: hidden;
+}
+
+.timepiece-shrine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, 
+        rgba(139, 115, 85, 0.02) 0%, 
+        transparent 50%);
+    transform: scale(0);
+    transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.timepiece-shrine:hover::before {
+    transform: scale(1);
+}
+
+/* Enhanced Watch Silhouette */
+.watch-silhouette {
+    position: relative;
+}
+
+.watch-silhouette::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background: var(--aged-parchment);
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center bottom;
+    animation: clockHandTick 60s linear infinite;
+    opacity: 0.8;
+}
+
+/* Light Caress Effect */
+.light-caress {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(ellipse at 30% 30%,
+        rgba(247, 245, 240, 0.1) 0%,
+        rgba(139, 115, 85, 0.05) 30%,
+        transparent 60%);
+    animation: breathingLight 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Section Title Enhancement */
+.section-title {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(139, 115, 85, 0.1) 40%,
+        rgba(139, 115, 85, 0.1) 60%,
+        transparent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: silkenShimmer 3s ease-in-out infinite;
+    opacity: 0;
+}
+
+.section-title:hover::before {
+    opacity: 1;
+}
+
+/* Contact Vessel Refinement */
+.contact-vessel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--antique-bronze) 50%,
+        transparent 100%);
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+}
+
+.contact-vessel:hover::before {
+    transform: scaleX(1);
+}
+
+/* Parallax & Scroll Effects */
+.hero-sanctuary {
+    background-attachment: fixed;
+}
+
+/* Smooth Scroll Enhancement */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-title,
+    .hero-meditation,
+    .hero-invitation {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    
+    .section-title,
+    .philosophy-verse,
+    .timepiece-shrine,
+    .narrative-verse {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}
+
+/* Intersection Observer Animation Classes */
+.fade-in-up {
+    animation: wistfulFadeIn 1.2s ease-out forwards;
+}
+
+.fade-in-delayed {
+    animation: wistfulFadeIn 1.2s ease-out 0.3s forwards;
+}
+
+.fade-in-contemplative {
+    animation: contemplativeReveal 1.8s ease-out forwards;
+}
+
+/* Custom Cursor Enhancement */
+body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="%23565856" stroke-width="1" opacity="0.5"/><circle cx="10" cy="10" r="2" fill="%23565856" opacity="0.8"/></svg>'), auto;
+}
+
+.cta-whisper,
+.nav-whisper,
+.discover-whisper,
+.contact-whisper,
+.footer-whisper {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="%238b7355" stroke-width="1.5"/><circle cx="10" cy="10" r="3" fill="%238b7355"/></svg>'), pointer;
+}
+
+/* Refined Typography Animations */
+.brand-name {
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-name::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--antique-bronze) 50%,
+        transparent 100%);
+    transform: scaleX(0);
+    transition: transform 2s ease;
+    animation: gentleExpand 4s ease-in-out 1s infinite;
+}
+
+/* Philosophy Verse Enhancement */
+.philosophy-verse {
+    position: relative;
+}
+
+.philosophy-verse::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    font-size: 3rem;
+    color: var(--antique-bronze);
+    opacity: 0.3;
+    font-family: var(--font-serif);
+}
+
+.philosophy-verse::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    font-size: 3rem;
+    color: var(--antique-bronze);
+    opacity: 0.3;
+    font-family: var(--font-serif);
+}
+
+/* Footer Brand Glow */
+.footer-brand {
+    animation: auroraGlow 8s ease-in-out infinite;
+}
+
+/* Enhanced Loading States */
+.aurora-loading {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.aurora-loaded .aurora-loading {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Staggered Loading Animation */
+.aurora-loaded .hero-text-sanctuary {
+    animation-delay: 0.2s;
+}
+
+.aurora-loaded .hero-timepiece-shrine {
+    animation-delay: 0.4s;
+}
+
+.aurora-loaded .timepiece-shrine:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.aurora-loaded .timepiece-shrine:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.aurora-loaded .timepiece-shrine:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.aurora-loaded .narrative-verse:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.aurora-loaded .narrative-verse:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.aurora-loaded .narrative-verse:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.aurora-loaded .contact-vessel:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.aurora-loaded .contact-vessel:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.aurora-loaded .contact-vessel:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+/* Enhanced Clock Animation */
+.minute-hand {
+    animation: clockTick 3600s linear infinite;
+}
+
+/* Chiaroscuro Lighting */
+.aurora-particle {
+    filter: blur(0.5px);
+}
+
+.timepiece-shrine:hover .chiaroscuro-lighting {
+    animation: lightingShift 2s ease-in-out infinite;
+}
+
+.hour-hand, .minute-hand {
+    filter: drop-shadow(0 0 2px rgba(42, 43, 42, 0.3));
+}
+
+.second-hand {
+    filter: drop-shadow(0 0 1px rgba(139, 115, 85, 0.5));
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .watch-silhouette {
+        animation-duration: 8s;
+    }
+    
+    .light-caress {
+        animation-duration: 10s;
+    }
+    
+    .hero-title {
+        animation-delay: 0.3s;
+    }
+    
+    .hero-meditation {
+        animation-delay: 0.6s;
+    }
+    
+    .hero-invitation {
+        animation-delay: 0.9s;
+    }
+    
+    .aurora-particle {
+        display: none; /* Reduce particles on mobile for performance */
+    }
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .aurora-loading {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .analogue-grain::before {
+        opacity: 0;
+    }
+    
+    .aurora-glow {
+        animation: none;
+    }
+    
+    .aurora-particle {
+        display: none;
+    }
+} 
